@@ -658,3 +658,13 @@ a {
     font-size: 1.4rem;
     color: #c2c2c2;
 }
+
+/* ====================================================================== */
+.feedback-list .radio {
+    display: none;
+}
+
+.feedback-list .feedback-item {
+    width: 25%;
+    transition: 2s;
+}

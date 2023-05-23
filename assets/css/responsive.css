@@ -1,0 +1,85 @@
+.hidden {
+    display: none;
+}
+
+.drawer-checkbox {
+    display: none;
+}
+
+/* PC */
+@media screen and (min-width: 992px) {
+    .tablet-header {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991px) {
+    .fixed-header {
+        display: none;
+    }
+
+    .drawer-checkbox:checked ~ .drawer {
+        transform: translateX(0);
+    }
+
+    .drawer-checkbox:checked ~ .drawer-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .toggle-drawer {
+        display: block;
+        padding: 24px 32px;
+    }
+
+    .toggle-drawer svg {
+        width: 28px;
+        color: #666;
+    }
+
+    .drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        z-index: 1;
+        background: #fff;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 40px;
+    }
+
+    .drawer ul {
+        margin-top: 40px;
+    }
+
+    .drawer li.separate {
+        border-top: 1px solid #ededed;
+    }
+
+    .drawer ul a {
+        display: inline-block;
+        padding: 14px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .drawer-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .drawer {
+        inset: 0 25% 0 0;
+    }
+}
